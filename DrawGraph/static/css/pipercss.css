@@ -1,0 +1,34 @@
+body {
+  background: #EEEEEE;
+}
+h1 {
+  color: #F00;
+  fint-size: 10px;
+}
+p {
+  font-size: 15px;
+  color: #F00;
+}
+div#first{
+  background: #ffffff;
+  width: 500px;
+  padding: 15px;
+  text-align: center;
+  margin: 30px auto;
+}
+div#temperature{
+  position: relative;
+  top: 600px;
+}
+div#humidity{
+  position: relative;
+  top: 100px;
+}
+div#distance{
+  position: relative;
+  top: 1100px;
+}
+div#door{
+  position: relative;
+  top: 1600px;
+}

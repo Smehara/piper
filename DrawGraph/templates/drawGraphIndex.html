@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js "></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script language="javascript" src="{{ url_for('static', filename='js/createGraph_t.js') }}"></script>
+<script language="javascript" src="{{ url_for('static', filename='js/createGraph_h.js') }}"></script>
+<script language="javascript" src="{{ url_for('static', filename='js/createGraph_d.js') }}"></script>
+<script language="javascript" src="{{ url_for('static', filename='js/createGraph_do.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+        $("#chart_t").load($(createChart_t))
+      }, 100000);
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+        $("#chart_h").load($(createChart_h))
+      }, 1000000);
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+        $("#chart_d").load($(createChart_d))
+      }, 1000000);
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+        $("#chart_do").load($(createChart_do))
+      }, 1000000);
+    });
+</script>
+<head>
+ <title h1>Piper研修</title>
+ <link rel="stylesheet" href="static/css/pipercss.css">
+</head>
+<body onload="createChart_t();createChart_h();createChart_d();createChart_do()">
+    <div id="first">
+      <h1>センサーデータ収集結果</h1>
+      <p>利用センサー①：DHT-11 Temperature and humidity Sensor</p>
+      <p>利用センサー②：Distance Sensor</p>
+    </div>
+    <div id="temperature"><div id=chart_t> </div></div>
+    <div id="humidity"><div id=chart_h> </div></div>
+    <div id="distance"><div id=chart_d> </div></div>
+    <div id="door"><div id=chart_do> </div></div>
+</body>
+</html>
